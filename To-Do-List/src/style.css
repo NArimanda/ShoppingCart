@@ -1,0 +1,37 @@
+body{
+  margin:0px;
+  padding:0px;
+  background-color: navy;
+  padding:5px;
+}
+
+#app{
+
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  gap:5px;
+}
+#app > div{
+  background-color: wheat;
+  height:100vh;
+  padding:10px;
+  border-radius:20px;
+  display:flex;
+  flex-direction:column;
+}
+
+#app > .projects{
+  flex-grow:1;
+  background-color: tomato;
+}
+
+#app > .ToDoList{
+  flex-grow: 4;
+}
+
+h1{
+  text-decoration:underline;
+  font-size: 80px;
+  align-self: center;
+}
