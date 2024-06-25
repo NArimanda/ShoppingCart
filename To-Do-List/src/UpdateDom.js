@@ -1,4 +1,5 @@
 import arrayManipulator from "./projectArray";
+import Selectioner from "./selector";
 
 class domDisplayer{
 
@@ -28,8 +29,17 @@ class domDisplayer{
 
 
     updateTodolist(OBJ){
-        let k = document.querySelector('.todo')
-        k.innerHTML = ``
+        let maruti = document.querySelector('.todo')
+        console.log(maruti)
+        maruti.innerHTML = ``
+        console.log(Selectioner.selector)
+        
+        for (let item of OBJ[Selectioner.selector]){
+            let to_append = document.createElement('li')
+            to_append.innerText = String(item)
+            maruti.appendChild(to_append)
+        }
+
 
     }
 }
