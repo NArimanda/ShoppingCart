@@ -12,9 +12,12 @@ class manipulateArray{
     }
 
     RemoveProject(projectName){
+        console.log(projectName)
         delete this.Arr[projectName]
-        (console.log(this.Arr))
+        console.log(this.Arr)
     }
+
+    
 }
 
 let arrayManipulator = new manipulateArray();

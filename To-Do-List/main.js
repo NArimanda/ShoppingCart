@@ -14,6 +14,7 @@ document.getElementById('app').innerHTML = `
 
 <div class='ToDoList'>
   <h1>To do List</h1>
+  <button id ='addtodo'>+</button>
   <ol class='todo>
 
   
@@ -25,3 +26,7 @@ document.getElementById('app').innerHTML = `
 let addProjectButton = document.querySelector('#add_project_button')
 
 addProjectButton.addEventListener('click', () => arrayManipulator.AddProject(prompt('Enter:')))
+
+let addTodoButton = document.querySelcetor('#addtodo')
+
+addTodoButton.addEventListener('click', )
