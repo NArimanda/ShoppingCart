@@ -26,7 +26,7 @@ class Selector{
 
     setSelector(text){
         this.selector = text;
-        domController.updateTodolist()
+        domController.updateTodolist(arrayManipulator.Arr)
     }
 }
 

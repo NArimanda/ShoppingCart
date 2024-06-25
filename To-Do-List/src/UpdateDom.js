@@ -10,6 +10,9 @@ class domDisplayer{
             let lick = document.createElement('div');
             let listitem = document.createElement('li')
             listitem.innerText = prop;
+            listitem.addEventListener('click', () => Selectioner.setSelector(listitem.innerText))
+
+
             let button = document.createElement('button')
             button.type = 'submit'
             button.innerText = 'delete'

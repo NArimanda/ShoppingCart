@@ -2,6 +2,7 @@ import domController from "./UpdateDom";
 import Selectioner from "./selector";
 
 class manipulateArray{
+    
     constructor(){
         this.Arr = {};
     }
