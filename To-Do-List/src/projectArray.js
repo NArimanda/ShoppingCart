@@ -10,24 +10,28 @@ class manipulateArray{
 
     AddProject(projectName) {
         this.Arr[projectName] = []
-        domController.updateProjects(this.Arr)
-        console.log(this.Arr)
+        domController.updateProjects(this.Arr, Selectioner.selector)
+        Selectioner.resolveSelector(arrayManipulator.Arr)
+
+
     }
 
     RemoveProject(projectName){
-        console.log(projectName)
         delete this.Arr[projectName]
-        if (projectName == Selectioner.selector){
+        Selectioner.resolveSelector(this.Arr)
+        if (this.Arr[Selectioner.selector] == undefined){
             Selectioner.newSelector(this.Arr)
         }
         domController.updateTodolist(this.Arr)
-        console.log(this.Arr)
+        domController.updateProjects(this.Arr, Selectioner.selector)
+   
+
     }
 
     Addlistitme(title){
-        console.log(title)
+ 
         this.Arr[Selectioner.resolveSelector(this.Arr)].push(title);
-        console.log(this.Arr)
+
         domController.updateTodolist(this.Arr)
     }
 }

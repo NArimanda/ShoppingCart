@@ -7,41 +7,47 @@ class Selector{
     }
 
     resolveSelector(arr){
-        console.log(arr)
+
         if(this.selector != ''){
+
             return this.selector;
         }
         else if(JSON.stringify(arr) == '{}'){
-            console.log('success')
+
             arrayManipulator.AddProject('Default')
             this.selector = 'Default'
             return this.selector;
         }
         else{
-            console.log('failure')
+
             this.selector = Object.keys(arr)[0]
             return this.selector
         }
+
     }
 
     newSelector(arr){
-        console.log(arr)
+
         if(JSON.stringify(arr) == '{}'){
-            console.log('success')
+
             arrayManipulator.AddProject('Default')
             this.selector = 'Default'
             return this.selector;
         }
         else{
-            console.log('failure')
+
             this.selector = Object.keys(arr)[0]
             return this.selector
         }
+
+
     }
     
     setSelector(text){
-        this.selector = text;
+        this.selector = text.innerText;
         domController.updateTodolist(arrayManipulator.Arr)
+        domController.updateProjects(arrayManipulator.Arr, this.selector)
+
     }
 }
 

@@ -68,3 +68,7 @@ button {
   justify-content: space-between;
   flex-grow:0;
 }
+
+#specialCase{
+  background-color: red;
+}
