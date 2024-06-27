@@ -11,7 +11,7 @@ class domDisplayer{
             let listitem = document.createElement('li')
             listitem.innerText = prop;
 
-            console.log(Selectioner.selector)
+
             listitem.addEventListener('click', () => Selectioner.setSelector(listitem))
             listitem.style.marginLeft = '5px'
 
@@ -32,10 +32,8 @@ class domDisplayer{
         }
         let ar = document.getElementsByClassName('lick')
         for (let x of ar){
-            console.log(x.innerText.replace('-', ''))
-            console.log(inpt)
-            console.log(String(inpt) == String(x.innerText.replace('-', '').replace(/\s+/g, '')))
-            if(inpt == x.innerText.replace('-', '').replace(/\s+/g, '')){
+
+            if(inpt.replace(/\s+/g, '') == x.innerText.replace('-', '').replace(/\s+/g, '')){
                 
                 x.style.backgroundColor = 'purple'
             }
@@ -47,9 +45,9 @@ class domDisplayer{
         let maruti = document.querySelector('.todo')
  
         maruti.innerHTML = ``
-        console.log(Selectioner.selector)
+ 
         
-        console.log(OBJ[Selectioner.selector])
+
         for (let item of OBJ[Selectioner.selector]){
             let to_append = document.createElement('li')
             to_append.innerText = String(item)
@@ -62,9 +60,7 @@ class domDisplayer{
     markSelected(inpt){
         let ar = document.getElementsByClassName('lick')
         for (let x of ar){
-            console.log(x.innerText.replace('-', ''))
-            console.log(inpt)
-            console.log(String(inpt) == String(x.innerText.replace('-', '').replace(/\s+/g, '')))
+
             if(inpt == x.innerText.replace('-', '').replace(/\s+/g, '')){
                 
                 x.style.backgroundColor = 'purple'
