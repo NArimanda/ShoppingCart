@@ -24,6 +24,21 @@ class Selector{
         }
     }
 
+    newSelector(arr){
+        console.log(arr)
+        if(JSON.stringify(arr) == '{}'){
+            console.log('success')
+            arrayManipulator.AddProject('Default')
+            this.selector = 'Default'
+            return this.selector;
+        }
+        else{
+            console.log('failure')
+            this.selector = Object.keys(arr)[0]
+            return this.selector
+        }
+    }
+    
     setSelector(text){
         this.selector = text;
         domController.updateTodolist(arrayManipulator.Arr)

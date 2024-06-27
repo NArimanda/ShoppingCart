@@ -11,20 +11,20 @@ class domDisplayer{
             let listitem = document.createElement('li')
             listitem.innerText = prop;
             listitem.addEventListener('click', () => Selectioner.setSelector(listitem.innerText))
+            listitem.style.marginLeft = '5px'
 
 
             let button = document.createElement('button')
             button.type = 'submit'
-            button.innerText = 'delete'
-            button.addEventListener('click', () => button.parentElement.remove())
-            button.addEventListener('click', () => arrayManipulator.RemoveProject(button.parentElement.innerText.replace('delete', '')))
+            button.innerText = '-'
 
+            button.addEventListener('click', () => button.parentElement.remove())
+            button.addEventListener('click', () => arrayManipulator.RemoveProject(button.parentElement.innerText.replace('-', '')))
+            lick.className = 'lick'
 
             lick.appendChild(listitem)
             lick.appendChild(button)
 
-            lick.style.display = 'flex'
-            lick.style.flexDirection = 'row'
 
             k.appendChild(lick)
         }

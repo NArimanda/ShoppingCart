@@ -17,6 +17,9 @@ class manipulateArray{
     RemoveProject(projectName){
         console.log(projectName)
         delete this.Arr[projectName]
+        if (projectName == Selectioner.selector){
+            Selectioner.newSelector(this.Arr)
+        }
         domController.updateTodolist(this.Arr)
         console.log(this.Arr)
     }
