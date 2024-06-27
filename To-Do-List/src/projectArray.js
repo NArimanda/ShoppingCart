@@ -10,8 +10,9 @@ class manipulateArray{
 
     AddProject(projectName) {
         this.Arr[projectName] = []
-        domController.updateProjects(this.Arr, Selectioner.selector)
         Selectioner.resolveSelector(arrayManipulator.Arr)
+        domController.updateProjects(this.Arr, Selectioner.selector)
+
 
 
     }
