@@ -1,5 +1,6 @@
 import domController from "./UpdateDom";
 import Selectioner from "./selector";
+import storageManager from "./localStorage";
 
 class manipulateArray{
     
@@ -12,9 +13,7 @@ class manipulateArray{
         this.Arr[projectName] = []
         Selectioner.resolveSelector(arrayManipulator.Arr)
         domController.updateProjects(this.Arr, Selectioner.selector)
-
-
-
+        storageManager.updateStorage(this.Arr)
     }
 
     RemoveProject(projectName){
@@ -25,7 +24,7 @@ class manipulateArray{
         }
         domController.updateTodolist(this.Arr)
         domController.updateProjects(this.Arr, Selectioner.selector)
-   
+        storageManager.updateStorage(this.Arr)
 
     }
 
@@ -34,6 +33,7 @@ class manipulateArray{
         this.Arr[Selectioner.resolveSelector(this.Arr)].push(new Object({title, desc, priority}));
         console.log(this.Arr)
         domController.updateTodolist(this.Arr)
+        storageManager.updateStorage(this.Arr)
     }
 }
 

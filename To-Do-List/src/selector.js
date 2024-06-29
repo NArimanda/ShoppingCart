@@ -47,7 +47,10 @@ class Selector{
         this.selector = text.innerText;
         domController.updateTodolist(arrayManipulator.Arr)
         domController.updateProjects(arrayManipulator.Arr, this.selector)
+    }
 
+    defineSelector(text){
+        this.selector = text
     }
 }
 

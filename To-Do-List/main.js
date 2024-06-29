@@ -1,4 +1,6 @@
 import arrayManipulator from "./src/projectArray"
+import storageManager from "./src/localStorage"
+import Selectioner from "./src/selector"
 
 document.getElementById('app').innerHTML = `
 <div class='projects'>
@@ -22,6 +24,21 @@ document.getElementById('app').innerHTML = `
 
 </div>
 `
+
+if (storageManager.getStorage()){
+  let stuff = JSON.parse(storageManager.getStorage())
+  for(let x in stuff){
+    arrayManipulator.AddProject(x)
+    Selectioner.defineSelector(x)
+
+    if(stuff[x][0] != undefined){
+      for (let q of stuff[x])
+        arrayManipulator.Addlistitme(q['title'], q['desc'], q['priority'])
+    }
+
+  }
+}
+
 
 let addProjectButton = document.querySelector('#add_project_button')
 
