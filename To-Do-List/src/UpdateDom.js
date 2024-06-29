@@ -1,5 +1,6 @@
 import arrayManipulator from "./projectArray";
 import Selectioner from "./selector";
+import htmlerSet from "./objectFormatter";
 
 class domDisplayer{
 
@@ -50,7 +51,11 @@ class domDisplayer{
 
         for (let item of OBJ[Selectioner.selector]){
             let to_append = document.createElement('li')
-            to_append.innerText = String(item)
+            for(let bak of htmlerSet(item)){
+                to_append.appendChild(bak)
+                console.log(bak.classList)
+            }
+
             maruti.appendChild(to_append)
         }
 

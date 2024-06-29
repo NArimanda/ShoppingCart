@@ -72,3 +72,13 @@ button {
 #specialCase{
   background-color: red;
 }
+
+li > .title{
+  color:orangered
+}
+li > .desc{
+  color:greenyellow
+}
+li > .priority{
+  color:bisque
+}

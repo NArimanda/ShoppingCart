@@ -29,10 +29,10 @@ class manipulateArray{
 
     }
 
-    Addlistitme(title){
- 
-        this.Arr[Selectioner.resolveSelector(this.Arr)].push(title);
-
+    Addlistitme(title, desc, priority){
+        
+        this.Arr[Selectioner.resolveSelector(this.Arr)].push(new Object({title, desc, priority}));
+        console.log(this.Arr)
         domController.updateTodolist(this.Arr)
     }
 }

@@ -29,4 +29,4 @@ addProjectButton.addEventListener('click', () => arrayManipulator.AddProject(pro
 
 let addTodoButton = document.querySelector('#addtodo')
 
-addTodoButton.addEventListener('click', () => arrayManipulator.Addlistitme(prompt('enter list item:')))
+addTodoButton.addEventListener('click', () => arrayManipulator.Addlistitme(prompt('enter list item:'), prompt('desc:'), prompt('priority')))
