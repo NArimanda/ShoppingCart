@@ -37,6 +37,10 @@ if (storageManager.getStorage()){
     }
 
   }
+  let p = document.createElement('div')
+  p.innerText = String(Object.keys(arrayManipulator.Arr)[0])
+  Selectioner.setSelector(p)
+  //Selectioner.setSelector(p)
 }
 
 
